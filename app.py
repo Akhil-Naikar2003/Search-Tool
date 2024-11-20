@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
-api_key = os.getenv("GROQ_API_KEY")
+api_key = st.secrets['GROQ_API_KEY']
 
 # Setup Wikipedia query
 api_wrapper = WikipediaAPIWrapper(top_k_results=1, doc_content_chars_max=200)
